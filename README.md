@@ -11,9 +11,9 @@ Please write a script that perform the following scenario:   // @Testq1
 8.	Access first search result.           // added option to access 1-15 search results from a page
 Please design your code (classes, methods and more) and add relevant assertions.
 
-Question 2 –                                                // testq2
+Question 2 –
 Access to any website and scrape every possible element, every element should be save at a separate file.
-For example:
+For example:   // testq2
 1.	From cli execute the following command – scarpe.py www.walla.co.il
 2.	The script will download all available elements from www.walla.co.il
 3.	Every element will be saved into a separate file under the same directory, element for example: image.
