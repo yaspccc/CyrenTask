@@ -11,18 +11,12 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Testq3 extends TestBase{
 
-    StackHomePage homePage = new StackHomePage(myDriver);
-
     @Test
-    public void a_login(){
-        myDriver.get("https://stackoverflow.com");
-        Assert.assertTrue(homePage.isPageLoaded());
-        Assert.assertTrue(homePage.login("yaspccc@gmail.com", "pdw8bhy2"));
+    public void a_calc(){
+        CalculatorMainView calc = new CalculatorMainView(myDriver);
+        Assert.assertTrue(calc.calcAction(CalculatorMainView.calcActions.PLUS, 2, 2).equals("4"));
+        Assert.assertTrue(calc.calcAction(CalculatorMainView.calcActions.MUL, 2, 2).equals("4"));
+        Assert.assertTrue(calc.calcAction(CalculatorMainView.calcActions.ODD, 2, 2).equals("1"));
     }
 
-    @Test
-    public void b_serach(){
-        Assert.assertTrue(homePage.search("python"));
-        Assert.assertTrue(homePage.selectResult(1));
-    }
 }
